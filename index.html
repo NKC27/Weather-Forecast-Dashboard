@@ -10,17 +10,23 @@
 </head>
 <body>
     <div class="jumbotron">
-        <h2>Weather Forecast Dashboard</h2>
+        <h1 class="display-3">Weather Forecast Dashboard</h1>
     </div>
     
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                
+                <h4>Enter City Search:</h4>
+                <span id="error"></span>
             </div>
+                <div class="col-sm-6">
+                    <div class=" form-group form-inline" id="cityDiv">         
+                        <input type="text" name="city" id="city" class="form-control" placeholder="Enter city name" >
+                        <button id="submitCity" class="btn btn-primary">Search City</button>
+                    </div>
+                </div>
         </div>
     </div>
-
 
  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
