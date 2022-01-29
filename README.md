@@ -25,4 +25,4 @@ THEN I am presented with the last searched city forecast
 
 # Screen Shot
 
-![alt text](image.jpg)
+![alt text](IMG/Screenshot.jpg)
