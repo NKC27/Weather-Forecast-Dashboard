@@ -1,38 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dasboard</title>
     <!-- Bootstrap CSS link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
+
 <body>
     <div class="jumbotron">
-        <h1 class="display-3">Weather Forecast Dashboard</h1>
+        <h1 class="display-3 text-center">Weather Forecast Dashboard</h1>
     </div>
-    
+
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <h4>Enter City Search:</h4>
                 <span id="error"></span>
             </div>
-                <div class="col-sm-6">
-                    <div class=" form-group form-inline" id="cityDiv">         
-                        <input type="text" name="city" id="city" class="form-control" placeholder="Enter city name" >
-                        <button id="submitCity" class="btn btn-primary">Search City</button>
-                    </div>
+            <div class="col-sm-6">
+                <div class=" form-group form-inline" id="cityDiv">
+                    <input type="text" name="city" id="city" class="form-control" placeholder="Enter city">
+                    <button id="citySearch" class="btn btn-warning ml-1">Search City</button>
                 </div>
+            </div>
         </div>
     </div>
 
- <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body display">
+          <h5 class="card-title" id="dateDays">Day: </h5>
+            <p class="card-text"></p>
+            <p class="card-text" id="cityName"></p>
+            <p class="card-text" id="currentDate"></p>
+            <p class="card-text" id="icon"></p>
+            <p class="card-text" id="temperature">celcius: </p>
+            <p class="card-text" id="humidity"></p>
+            <p class="card-text" id="UVIndex"></p>
+        </div>
+    </div>
+</div>   
 
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<!-- <form id="weatherForm">
+    <label for="weatherLocation">Location</label>
+    <input type="text" id="weatherLocationCity" />
+    <button type="submit">Generate Forecast</button>
+</form> -->
+<br>        
+<div class="container">
+    <h4>Previous Destinations</h4>
+    <div id="prevCity"></div>
+</div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <script src="./JS/script.js"></script>
 </body>
+
 </html>
