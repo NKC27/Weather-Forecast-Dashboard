@@ -3,72 +3,48 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dasboard</title>
-    <!-- Bootstrap CSS link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
 </head>
 
 <body>
-    <div class="jumbotron">
-        <h1 class="display-3 text-center">Weather Forecast Dashboard</h1>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><h1 class="display-1 text-white">Weather Forecast Dashboard</h1></a>
+        </div>
+    </nav>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h4>Enter City Search:</h4>
-                <span id="error"></span>
+    <main class="col justify-space-between">
+        
+        <div class="container col">
+            <div class="input-group mb-3 col-md-4">
+                    <input id="city" type="text" class="form-control mt-3" placeholder="Name of City" aria-label="Search"
+                        aria-describedby="button-addon2">
+                    <div class="input-group-append mt-3">
+                        <button id="search" class="btn btn-primary " type="button">Search</button>
+                    </div>
             </div>
-            <div class="col-sm-6">
-                <div class=" form-group form-inline" id="cityDiv">
-                    <input type="text" name="city" id="city" class="form-control" placeholder="Enter city">
-                    <button id="citySearch" class="btn btn-warning ml-1">Search City</button>
-                </div>
+            <!-- previous Searches-->
+            <div id="previous" class="card" style="width: 18rem;">
             </div>
         </div>
-    </div>
 
-<div class="container">
-    <div class="card" style="width: 18rem;">
-        <div class="card-body display">
-          <h5 class="card-title" id="dateDays">Day: </h5>
-            <p class="card-text"></p>
-            <p class="card-text" id="cityName"></p>
-            <p class="card-text" id="currentDate"></p>
-            <p class="card-text" id="icon"></p>
-            <p class="card-text" id="temperature">celcius: </p>
-            <p class="card-text" id="humidity"></p>
-            <p class="card-text" id="UVIndex"></p>
+        <!-- Weather Date-->
+        <div class="container col">
+           
+            <div id="weather-dash" class="card w-75 ">
+            </div>
+
+            <!-- cards -->
+            <div id="weather-cards" class="row justify-content-around">
+            </div>
         </div>
-    </div>
-</div>   
 
-<!-- <form id="weatherForm">
-    <label for="weatherLocation">Location</label>
-    <input type="text" id="weatherLocationCity" />
-    <button type="submit">Generate Forecast</button>
-</form> -->
-<br>        
-<div class="container">
-    <h4>Previous Destinations</h4>
-    <div id="prevCity"></div>
-</div>
-    <!-- script links  -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
+    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./JS/script.js"></script>
 </body>
 
